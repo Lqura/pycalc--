@@ -3,9 +3,9 @@ import pycalc.pycalc as calculator
 
 class PyCalcUnitTests(unittest.TestCase):
   def test_add(self):
-    left = [5]
-    right = [9]
-    expected = [14]
+    left = [5,7,365,0,0,0,-50,-12,-4]
+    right = [9,0,-2,445,0,-54,100,0,-49]
+    expected = [14,7,363,445,0,-54,50,-12,-53] 
     for i in range(len(left)):
       l = left[i]
       r = right[i]
@@ -15,9 +15,9 @@ class PyCalcUnitTests(unittest.TestCase):
         self.assertEqual(got, e)
 
   def test_multiply(self):
-    left = [5]
-    right = [9]
-    expected = [45]
+    left = [5,5,5,0,0,0,-5,-5,-5]
+    right = [9,0,-9,9,0,-9,9,0,-9]
+    expected = [45,0,-45,0,0,0,-45,0,-45]
     for i in range(len(left)):
       l = left[i]
       r = right[i]
